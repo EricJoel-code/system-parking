@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenidos al Sistema de Parqueadero</h1>
+        <img src="/images/parking.jpg" alt="Parking" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
+        <div class="btn-container">
+            <button onclick="window.location.href='/clients/new'">Crear Cliente</button>
+            <button onclick="window.location.href='/vehicles/list'">Listar Vehiculos</button>
+            <button onclick="window.location.href='/vehicles/new'">Ingresar Vehiculo de un Cliente</button>
+        </div>
+    </div>
+</body>
+</html>

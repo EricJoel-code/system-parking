@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Vehículos</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+</head>
+<body>
+<div class="container">
+    <h1>Lista de Vehículos</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Placa</th>
+            <th>Modelo</th>
+            <th>Color</th>
+            <th>Propietario</th>
+            <th>Contacto del Propietario</th>
+            <th>Lugar de Estacionamiento</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="vehicle : ${vehicles}">
+            <td th:text="${vehicle.id}"></td>
+            <td th:text="${vehicle.licensePlate}"></td>
+            <td th:text="${vehicle.model}"></td>
+            <td th:text="${vehicle.color}"></td>
+            <td th:text="${vehicle.ownerName}"></td>
+            <td th:text="${vehicle.ownerContact}"></td>
+            <td th:text="${vehicle.parkingSpot != null ? vehicle.parkingSpot.spotNumber : 'N/A'}"></td>
+            <td>
+                <form th:action="@{'/retire/' + ${vehicle.id}}" method="post">
+                    <button type="submit">Retirar Vehículo</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="btn-container">
+        <button onclick="window.location.href='/'">Pagina Principal</button>
+    </div>
+</div>
+</body>
+</html>

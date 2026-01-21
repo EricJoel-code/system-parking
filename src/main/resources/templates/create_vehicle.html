@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Crear Vehículo</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+</head>
+<body>
+<div class="container">
+    <h1>Ingresar Nuevo Vehículo</h1>
+    <form action="#" th:action="@{/vehicles}" th:object="${vehicle}" method="post">
+        <label for="licensePlate">Placa:</label>
+        <input type="text" id="licensePlate" th:field="*{licensePlate}" required/>
+        <br/>
+        <label for="model">Modelo:</label>
+        <input type="text" id="model" th:field="*{model}" required/>
+        <br/>
+        <label for="color">Color:</label>
+        <input type="text" id="color" th:field="*{color}" required/>
+        <br/>
+        <label for="ownerName">Nombre del Propietario:</label>
+        <input type="text" id="ownerName" th:field="*{ownerName}" required/>
+        <br/>
+        <label for="ownerContact">Contacto del Propietario:</label>
+        <input type="text" id="ownerContact" th:field="*{ownerContact}" required/>
+        <br/>
+        <label for="client">Cliente:</label>
+        <select id="client" th:field="*{client.id}">
+            <option th:each="client : ${clients}" th:value="${client.id}" th:text="${client.name}"></option>
+        </select>
+        <br/>
+        <label for="parkingSpot">Lugar de Estacionamiento:</label>
+        <select id="parkingSpot" th:field="*{parkingSpot.id}">
+            <option th:each="spot : ${parkingSpots}" th:value="${spot.id}" th:text="${spot.spotNumber}"></option>
+        </select>
+        <br/>
+        <button type="submit">Guardar</button>
+    </form>
+    <div class="btn-container">
+        <a href="/">
+            <button>Pagina Principal</button>
+        </a>
+    </div>
+</div>
+</body>
+</html>
