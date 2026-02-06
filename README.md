@@ -109,7 +109,7 @@ src/
 git clone https://github.com/tu-usuario/system-parking.git
 
 # Configurar la base de datos en application.properties
-spring.datasource.url=jdbc:mysql://localhost:3306/parking_db
+spring.datasource.url=jdbc:mysql://localhost:3306/tu-base-de-datos
 spring.datasource.username=usuario
 spring.datasource.password=contraseña
 
