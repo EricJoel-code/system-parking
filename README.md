@@ -140,7 +140,8 @@ http://localhost:8080
 
 ## 👨‍💻 Autor
 
-**Eric Cacuango**
+**Eric Joel Cacuango de la Torre**
+
 Desarrollador de Software Junior
 
 ---
