@@ -142,10 +142,4 @@ http://localhost:8080
 
 **Eric Joel Cacuango de la Torre**
 
-Desarrollador de Software Junior
-
----
-
-## 📝 Licencia
-
-Proyecto desarrollado con fines educativos y de práctica profesional.
+Desarrollador Backend Junior
